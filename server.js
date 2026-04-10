@@ -6,7 +6,7 @@ const cors = require('@fastify/cors');
 
 const fastify = Fastify({ logger: true });
 
-fastify.register(cors, { origin: true });
+fastify.register(cors, { origin: '*' });
 
 // Conexión a Base de Datos de MongoDB
 mongoose.connect(process.env.MONGO_URI)
